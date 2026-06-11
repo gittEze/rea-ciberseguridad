@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        REA | Ciberseguridad para 8.º Grado
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         PARTICULAS DE FONDO
+    =========================== -->
+
+    <div id="particles"></div>
+
+    <!-- ==========================
+         HEADER
+    =========================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                🔐 Ciberseguridad
+            </h1>
+
+    
+        
+
+            <p>
+                Aprende a proteger tu información, reconocer amenazas digitales
+                y navegar de forma segura en Internet.
+            </p>
+                
+        </div>
+
+    </header>
+
+    <!-- ==========================
+         MENÚ DE NAVEGACIÓN
+    =========================== -->
+
+    <nav class="navbar">
+        <a href="#intro">Introducción</a>
+        <a href="#amenazas">Amenazas</a>
+        <a href="#passwords">Contraseñas</a>
+        <a href="#phishing">Phishing</a>
+        <a href="#social">Redes Sociales</a>
+        <a href="#huella">Huella Digital</a>
+        <a href="#ciberacoso">Ciberacoso</a>
+        <a href="#proteccion">Protección</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#glosario">Glosario</a>
+
+    </nav>
+
+    <main>
+
+        <!-- ==========================
+             INTRODUCCIÓN
+        =========================== -->
+
+        <section id="intro" class="card">
+
+    <h2>¿Qué es la Ciberseguridad?</h2>
+
+    <div class="contenedor-video">
+        <iframe
+            width="560" height="315" src="https://www.youtube.com/embed/SZlnyFujkGE?si=QssA-qkMCsoAzQlH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=
+            "strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+
+        </section>
+
+        <!-- ==========================
+             AMENAZAS
+        =========================== -->
+        <section id="amenazas" class="card">
+
+            <h2>⚠️ Amenazas Digitales: Completa la frase</h2>
+
+            <p>
+                Arrastra la palabra correcta al espacio en blanco.
+            </p>
+
+            <div class="sentence-game">
+
+                <div id="sentenceText" class="sentence-text"></div>
+
+                <div id="wordBank" class="word-bank"></div>
+
+                <button id="checkSentence">
+                    Verificar
+                </button>
+
+                <div id="sentenceResult"></div>
+
+                <div id="sentenceProgress">
+                    Frase 1 de 6
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             CONTRASEÑAS
+        =========================== -->
+
+        <section id="passwords" class="card">
+
+            <h2>🔑 Contraseñas Seguras</h2>
+
+            <ul>
+
+                <li>Utilizar al menos 12 caracteres.</li>
+                <li>Combinar letras, números y símbolos.</li>
+                <li>No compartir contraseñas.</li>
+                <li>No reutilizar la misma contraseña.</li>
+                <li>Activar autenticación en dos pasos.</li>
+
+            </ul>
+
+            <div class="password-checker">
+
+                <input
+                    type="text"
+                    id="passwordInput"
+                    placeholder="Escribe una contraseña">
+
+                <button id="checkPassword">
+                    Evaluar
+                </button>
+
+            </div>
+
+            <div id="passwordResult"></div>
+
+        </section>
+
+        <!-- ==========================
+             PHISHING
+        =========================== -->
+
+        <section id="phishing" class="card">
+
+        <h2>🔤 Desafío de Anagramas: Phishing</h2>
+
+        <p>
+            Ordena las letras para descubrir palabras relacionadas con la
+            ciberseguridad y el phishing.
+        </p>
+
+        <div class="anagram-game">
+
+            <div id="anagramLetters" class="anagram-letters"></div>
+
+            <div id="anagramSlots" class="anagram-slots"></div>
+
+            <button id="checkAnagram">
+                Verificar
+            </button>
+
+            <div id="anagramResult"></div>
+
+            <div id="anagramProgress">
+                Palabra 1 de 8
+            </div>
+
+        </div>
+
+    </section>
+
+
+        <!-- ==========================
+             REDES SOCIALES
+        =========================== -->
+
+        <section id="social" class="card">
+
+            <h2>📱 Uso Seguro de Redes Sociales</h2>
+
+            <div class="grid">
+
+                <div class="info-box">
+                    Configura tu privacidad.
+                </div>
+
+                <div class="info-box">
+                    Piensa antes de publicar.
+                </div>
+
+                <div class="info-box">
+                    No compartas datos personales.
+                </div>
+
+                <div class="info-box">
+                    Reporta contenido inapropiado.
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             HUELLA DIGITAL
+        =========================== -->
+<section id="huella" class="card">
+
+    <h2>👣 Huella Digital</h2>
+
+ 
+    <div class="contenedorHuella-video">
+         <iframe 
+         width="560" height="315" src="https://www.youtube.com/embed/fLKPsy2_2Og?si=jNB5JBPkCnCKDwfO" title="YouTube video player" 
+         frameborder="0" allow="accelerometer; autoplay; 
+         clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+          web-share" referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>  
+    </div>
+    
+
+    <div class="highlight">
+        Antes de publicar algo en Internet, pregúntate: ¿Me sentiría cómodo si
+        esta información permaneciera visible dentro de cinco o diez años?
+    </div>
+
+</section>
+
+        <!-- ==========================
+             CIBERACOSO
+        =========================== -->
+
+        <section id="ciberacoso" class="card">
+
+        <h2>🎮 Minijuego: Une las parejas</h2>
+
+        <p>
+            Arrastra cada concepto y colócalo junto a su definición correcta.
+        </p>
+
+        <div class="matching-game">
+
+            <div class="terms">
+
+                <div class="draggable-match" draggable="true" data-match="1">
+                    Ciberacoso
+                </div>
+
+                <div class="draggable-match" draggable="true" data-match="2">
+                    Denunciar
+                </div>
+
+                <div class="draggable-match" draggable="true" data-match="3">
+                    Bloquear
+                </div>
+
+                <div class="draggable-match" draggable="true" data-match="4">
+                    Evidencia
+                </div>
+
+                <div class="draggable-match" draggable="true" data-match="5">
+                    Respeto
+                </div>
+
+            </div>
+
+            <div class="definitions">
+
+                <div class="match-zone" data-match="4">
+                    Capturas o pruebas que muestran lo ocurrido.
+                </div>
+
+                <div class="match-zone" data-match="1">
+                    Acción de molestar o humillar a alguien mediante medios digitales.
+                </div>
+
+                <div class="match-zone" data-match="5">
+                    Tratar a otras personas de forma adecuada en Internet.
+                </div>
+
+                <div class="match-zone" data-match="2">
+                    Informar una situación a la plataforma o a un adulto.
+                </div>
+
+                <div class="match-zone" data-match="3">
+                    Impedir que una persona pueda contactarte.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="matchingResult"></div>
+
+        </section>
+
+
+        <!-- ==========================
+             PROTECCIÓN
+        =========================== -->
+
+        <section id="proteccion" class="card">
+
+            <h2>🛡️ Protección de Dispositivos</h2>
+
+            <div class="grid">
+
+                <div class="info-box">
+                    Mantener actualizaciones al día.
+                </div>
+
+                <div class="info-box">
+                    Utilizar antivirus.
+                </div>
+
+                <div class="info-box">
+                    Realizar copias de seguridad.
+                </div>
+
+                <div class="info-box">
+                    Descargar desde sitios confiables.
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             QUIZ
+        =========================== -->
+
+       <section id="quiz" class="card">
+
+            <h2>🎯 Desafío de Ciberseguridad</h2>
+
+        <p>
+            Llegó el momento de poner en práctica lo aprendido. Lee cada pregunta,
+            analiza las opciones y selecciona la respuesta que consideres correcta.
+            Esta actividad te ayudará a identificar conceptos fundamentales sobre
+            seguridad digital y uso responsable de Internet.
+        </p>
+
+        <form id="quizForm">
+
+            <div class="question">
+
+                <p>
+                    <strong>1.</strong> ¿Cuál de las siguientes opciones representa
+                    una contraseña más segura?
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    123456
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Segur1dad#2026
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    contraseña
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>
+                    <strong>2.</strong> ¿Cuál es el objetivo principal del phishing?
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    Obtener información personal mediante engaños
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    Aumentar la velocidad de Internet
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    Mejorar la seguridad de una cuenta
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>
+                    <strong>3.</strong> ¿Qué deberías hacer si recibes un mensaje de
+                    un desconocido solicitando tu contraseña?
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Compartirla para evitar problemas
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Ignorar el mensaje y reportarlo
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Publicarla en redes sociales
+                </label>
+
+            </div>
+
+            <div class="question">
+
+                <p>
+                    <strong>4.</strong> ¿Cuál de las siguientes acciones contribuye a
+                    una navegación segura?
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Descargar archivos de cualquier sitio web
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Compartir información personal con desconocidos
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Verificar los enlaces antes de hacer clic
+                </label>
+
+            </div>
+
+            <button type="submit">
+                Verificar respuestas
+            </button>
+
+        </form>
+
+        <div id="quizResult"></div>
+
+        </section>
+
+
+        <!-- ==========================
+             GLOSARIO
+        =========================== -->
+<section id="glosario" class="card">
+
+    <h2>📚 Glosario de Ciberseguridad</h2>
+
+    <div 
+        style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+        border-radius: 8px; will-change: transform;">
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+            src="https://www.canva.com/design/DAHMCN9ug_M/l6Mt3OtAmCVratg6FDpMMw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- ==========================
+         FOOTER
+    =========================== -->
+
+    <footer>
+
+        <p>
+            REA de Ciberseguridad para 8.º Grado
+        </p>
+
+        <p>
+            Educación Digital • Ciudadanía Digital • Seguridad en Internet
+        </p>
+
+        <img src="cc.png" alt="Creative Commons CC0" loading="lazy" width="200">
+    
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

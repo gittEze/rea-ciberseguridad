@@ -1,0 +1,1054 @@
+/* =====================================================
+   REA CIBERSEGURIDAD
+   STYLES.CSS
+===================================================== */
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(
+        135deg,
+        #07121f,
+        #0d2238,
+        #15395d
+    );
+    color:#ffffff;
+    overflow-x:hidden;
+    min-height:100vh;
+    position:relative;
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08111d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1ea7ff;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#4dbdff;
+}
+
+/* =====================================================
+   PARTÍCULAS
+===================================================== */
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.particle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:rgba(255,255,255,.3);
+    animation:floatParticle linear infinite;
+}
+
+@keyframes floatParticle{
+
+    from{
+        transform:translateY(100vh);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+
+}
+
+/* =====================================================
+   BOTÓN GLASS - MÁS INFORMACIÓN
+===================================================== */
+
+.glass-btn{
+    margin-left:10px;
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ffbe55;
+    color:#081526;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+/* hover */
+.glass-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,7vw,6rem);
+    font-weight:800;
+    margin-bottom:20px;
+    text-shadow:0 0 25px rgba(30,167,255,.5);
+}
+
+.hero h2{
+    font-size:clamp(1.3rem,3vw,2.2rem);
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#dce8f7;
+    margin-bottom:35px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+
+    padding:15px;
+
+    background:
+    rgba(8,17,29,.85);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.1);
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:.9rem;
+    font-weight:500;
+
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    transition:.3s;
+}
+
+.navbar a:hover{
+    background:
+    rgba(255,255,255,.1);
+
+    transform:translateY(-2px);
+}
+
+/* =====================================================
+   PROGRESO
+===================================================== */
+
+.progress-section{
+    padding:30px;
+}
+
+.progress-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.progress-bar{
+    height:18px;
+    background:
+    rgba(255,255,255,.1);
+
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00d084,
+        #00ff95
+    );
+
+    transition:.5s;
+}
+
+#progressText{
+    display:block;
+    text-align:center;
+    margin-top:12px;
+    font-weight:600;
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+    width:min(1200px,95%);
+    margin:auto;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card{
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.25);
+
+    opacity:0;
+    transform:translateY(40px);
+
+    transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-top:20px;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+    color:#e7eef8;
+}
+
+.card ul{
+    padding-left:25px;
+}
+
+.card li{
+    margin-bottom:12px;
+    line-height:1.7;
+}
+
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
+
+.highlight{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border-left:5px solid #1ea7ff;
+
+    background:
+    rgba(30,167,255,.12);
+
+    border-radius:12px;
+}
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:20px;
+}
+
+.info-box{
+
+    background:
+    rgba(255,255,255,.06);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    padding:25px;
+
+    border-radius:18px;
+
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-6px);
+    background:
+    rgba(255,255,255,.1);
+}
+
+/* BOTON PARA AMENAZAS */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ffbe55;
+    color:#081526;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =====================================================
+   PASSWORD CHECKER
+===================================================== */
+
+.password-checker{
+    margin-top:25px;
+
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.password-checker input{
+
+    flex:1;
+    min-width:250px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+}
+
+.password-checker button{
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#1ea7ff;
+    color:white;
+
+    transition:.3s;
+}
+
+.password-checker button:hover{
+    transform:translateY(-2px);
+}
+
+#passwordResult{
+    margin-top:20px;
+    font-weight:600;
+}
+
+.weak{
+    color:#ff6565;
+}
+
+.medium{
+    color:#ffd95c;
+}
+
+.strong{
+    color:#62ff92;
+}
+
+/* VIDEO APARTADO */
+
+.contenedor-video {
+  width: 100%;            /* Ocupa el ancho máximo de su contenedor */
+  max-width: 800px;       /* Evita que se estire demasiado en pantallas gigantes */
+  margin: 20px auto;      /* Centra el video horizontalmente y da espacio arriba/abajo */
+  aspect-ratio: 16 / 9;   /* Mantiene la proporción perfecta de YouTube */
+}
+
+.contenedor-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;     /* Opcional: Le da bordes redondeados estéticos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Opcional: Una leve sombra */
+}
+
+.contenedor-Huellavideo {
+  width: 50%;            /* Ocupa el ancho máximo de su contenedor */
+  max-width: 800px;       /* Evita que se estire demasiado en pantallas gigantes */
+  margin: 20px auto;      /* Centra el video horizontalmente y da espacio arriba/abajo */
+  aspect-ratio: 16 / 9;   /* Mantiene la proporción perfecta de YouTube */
+}
+
+.contenedor-Huellavideo iframe {
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;     /* Opcional: Le da bordes redondeados estéticos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Opcional: Una leve sombra */
+}
+
+/* =====================================================
+   ACTIVIDAD
+===================================================== */
+
+.activity-container{
+    margin-top:30px;
+}
+
+#situations{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.draggable{
+
+    background:
+    rgba(30,167,255,.15);
+
+    border:
+    1px solid rgba(30,167,255,.3);
+
+    padding:15px 20px;
+
+    border-radius:15px;
+
+    cursor:grab;
+
+    user-select:none;
+
+    transition:.3s;
+}
+
+.draggable:hover{
+    transform:scale(1.03);
+}
+
+.dragging{
+    opacity:.5;
+}
+
+.dropzones{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.dropzone{
+
+    min-height:220px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:2px dashed
+    rgba(255,255,255,.3);
+
+    background:
+    rgba(255,255,255,.05);
+}
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.question{
+    margin-bottom:35px;
+}
+
+.question p{
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.question label{
+    display:block;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+#quiz button{
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00d084,
+        #00ff95
+    );
+
+    color:#06131d;
+}
+
+#quizResult{
+    margin-top:25px;
+    font-size:1.1rem;
+    font-weight:700;
+}
+
+/* =====================================================
+   ACORDEÓN
+===================================================== */
+
+.accordion{
+    margin-top:20px;
+}
+
+.accordion-item{
+    margin-bottom:15px;
+}
+
+.accordion-header{
+
+    width:100%;
+
+    text-align:left;
+
+    padding:18px;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:600;
+
+    border-radius:12px;
+
+    background:
+    rgba(255,255,255,.08);
+}
+
+.accordion-header.active{
+    background:
+    rgba(30,167,255,.2);
+}
+
+.accordion-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border-radius:0 0 12px 12px;
+
+    padding:0 18px;
+}
+
+.accordion-content p{
+    padding:15px 0;
+}
+
+/* =====================================================
+   TOAST LOGROS
+===================================================== */
+
+.achievement-toast{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:9999;
+
+    padding:18px 25px;
+
+    border-radius:15px;
+
+    background:
+    rgba(0,0,0,.85);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    transform:
+    translateX(400px);
+
+    transition:.5s;
+}
+
+.achievement-toast.show{
+    transform:
+    translateX(0);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    background:
+    rgba(0,0,0,.25);
+}
+
+footer p{
+    margin-bottom:10px;
+}
+
+/* =====================================
+   COMPLETAR FRASES
+===================================== */
+
+.sentence-game{
+
+    margin-top:30px;
+    text-align:center;
+}
+
+.sentence-text{
+
+    font-size:1.2rem;
+    line-height:2;
+
+    margin-bottom:30px;
+}
+
+.blank{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:140px;
+    min-height:45px;
+
+    margin:0 8px;
+
+    border-radius:10px;
+
+    border:2px dashed
+    rgba(255,255,255,.3);
+
+    background:
+    rgba(255,255,255,.05);
+}
+
+.blank.filled{
+
+    border-color:#00ff95;
+}
+
+.word-bank{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.word-card{
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:grab;
+
+    font-weight:600;
+
+    background:
+    rgba(30,167,255,.15);
+
+    border:
+    1px solid rgba(30,167,255,.35);
+
+    transition:.3s;
+}
+
+.word-card:hover{
+
+    transform:translateY(-2px);
+}
+
+#checkSentence{
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#1ea7ff;
+
+    color:white;
+
+    font-weight:600;
+}
+
+#sentenceResult{
+
+    margin-top:20px;
+    font-weight:700;
+}
+
+#sentenceProgress{
+
+    margin-top:15px;
+    opacity:.8;
+}
+
+/* =====================================
+   MINIJUEGO EMPAREJAR
+===================================== */
+
+.matching-game{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:25px;
+    margin-top:30px;
+}
+
+.terms,
+.definitions{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.draggable-match{
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:
+    rgba(30,167,255,.15);
+
+    border:
+    1px solid rgba(30,167,255,.3);
+
+    cursor:grab;
+
+    transition:.3s;
+}
+
+.draggable-match:hover{
+    transform:translateY(-2px);
+}
+
+.match-zone{
+
+    min-height:70px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:2px dashed
+    rgba(255,255,255,.25);
+
+    background:
+    rgba(255,255,255,.05);
+
+    display:flex;
+    align-items:center;
+}
+
+.match-zone.correct{
+
+    border-color:#00ff95;
+
+    background:
+    rgba(0,255,149,.15);
+}
+
+#matchingResult{
+    margin-top:25px;
+    font-weight:700;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+    .matching-game{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =====================================
+   ANAGRAMA
+===================================== */
+
+.anagram-game{
+
+    margin-top:30px;
+    text-align:center;
+}
+
+.anagram-letters,
+.anagram-slots{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    margin:25px 0;
+}
+
+.letter{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    font-weight:700;
+    font-size:1.2rem;
+
+    cursor:grab;
+
+    background:
+    rgba(30,167,255,.2);
+
+    border:
+    1px solid rgba(30,167,255,.4);
+}
+
+.slot{
+
+    width:55px;
+    height:55px;
+
+    border-radius:12px;
+
+    border:2px dashed
+    rgba(255,255,255,.3);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.slot.filled{
+
+    background:
+    rgba(255,255,255,.08);
+}
+
+#checkAnagram{
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#1ea7ff;
+    color:white;
+
+    font-weight:600;
+}
+
+#anagramResult{
+
+    margin-top:20px;
+    font-weight:700;
+}
+
+#anagramProgress{
+
+    margin-top:15px;
+    opacity:.8;
+}
+
+/* =====================================================
+   EFECTOS DE ENTRADA
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-content{
+    animation:
+    fadeUp 1s ease;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    .hero{
+        min-height:80vh;
+    }
+
+    .card{
+        padding:30px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        gap:8px;
+    }
+
+    .navbar a{
+        font-size:.8rem;
+        padding:8px 12px;
+    }
+
+    .dropzones{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .card h2{
+        font-size:1.7rem;
+    }
+
+} /* ← ESTA LLAVE FALTABA */
+
+@media(max-width:480px){
+
+    .hero{
+        padding:20px;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .password-checker{
+        flex-direction:column;
+    }
+
+    .password-checker input{
+        min-width:100%;
+    }
+
+}
