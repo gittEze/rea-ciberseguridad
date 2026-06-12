@@ -28,6 +28,7 @@ function initializeApp() {
     setupMatchingGame();
     setupAnagramGame();
     setupSentenceGame();
+    setupProtectionCards();
 
 }
 
@@ -1217,6 +1218,30 @@ document.addEventListener(
 
     }
 );
+
+function setupProtectionCards(){
+
+    const cards =
+        document.querySelectorAll(
+            ".expandable"
+        );
+
+    cards.forEach(card => {
+
+        card.addEventListener(
+            "click",
+            () => {
+
+                card.classList.toggle(
+                    "active"
+                );
+
+            }
+        );
+
+    });
+
+}
 
 /* =====================================================
    MENSAJE DE BIENVENIDA
