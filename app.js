@@ -793,58 +793,137 @@ function setupQuiz() {
 
     form.addEventListener("submit", event => {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    let score = 0;
+        let score = 0;
 
-    // Respuestas correctas actualizadas según el nuevo quiz
-    const answers = {
-        q1: "b",
-        q2: "a",
-        q3: "b",
-        q4: "c"
-    };
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "b",
+            q4: "c"
+        };
 
-    Object.keys(answers).forEach(question => {
+        const correctAnswers = {
+            q1: {
+                text: "Segur1dad#2026",
+                explanation:
+                    "Porque combina letras mayúsculas, minúsculas, números y símbolos, lo que la hace mucho más difícil de adivinar."
+            },
 
-        const selected = document.querySelector(
-            `input[name="${question}"]:checked`
-        );
+            q2: {
+                text: "Obtener información personal mediante engaños",
+                explanation:
+                    "Porque el phishing busca engañar a las personas para que revelen contraseñas, datos bancarios u otra información privada."
+            },
 
-        if (selected && selected.value === answers[question]) {
-            score++;
+            q3: {
+                text: "Ignorar el mensaje y reportarlo",
+                explanation:
+                    "Porque nunca debes compartir tus contraseñas. Reportar el mensaje ayuda a prevenir que otras personas sean engañadas."
+            },
+
+            q4: {
+                text: "Verificar los enlaces antes de hacer clic",
+                explanation:
+                    "Porque permite detectar enlaces falsos o peligrosos y reduce el riesgo de ingresar a sitios fraudulentos."
+            }
+        };
+
+        const incorrectAnswers = [];
+
+        Object.keys(answers).forEach(question => {
+
+            const selected = document.querySelector(
+                `input[name="${question}"]:checked`
+            );
+
+            if (
+                selected &&
+                selected.value === answers[question]
+            ) {
+
+                score++;
+
+            } else {
+
+                incorrectAnswers.push({
+                    question: question,
+                    correct: correctAnswers[question].text,
+                    explanation: correctAnswers[question].explanation
+                });
+
+            }
+
+        });
+
+        const total =
+            Object.keys(answers).length;
+
+        const percentage =
+            Math.round(
+                (score / total) * 100
+            );
+
+        let feedback = "";
+
+        if (percentage >= 80) {
+
+            feedback =
+            `🏆 ¡Excelente! ${score}/${total} respuestas correctas.<br><br>`;
+
+            unlockAchievement(
+                "cyber-expert",
+                "Experto en Ciberseguridad"
+            );
+
+        } else if (percentage >= 50) {
+
+            feedback =
+            `👍 ¡Buen trabajo! ${score}/${total} respuestas correctas.<br><br>`;
+
+        } else {
+
+            feedback =
+            `📚 Sigue aprendiendo. ${score}/${total} respuestas correctas.<br><br>`;
+
         }
 
+        if (incorrectAnswers.length > 0) {
+
+            feedback +=
+            "<strong>Respuestas incorrectas:</strong><br><br>";
+
+            incorrectAnswers.forEach(item => {
+
+                feedback +=
+                `
+                <div style="
+                margin:15px 0;
+                padding:15px;
+                border-radius:12px;
+                background:rgba(255,255,255,.08);
+                text-align:left;
+                ">
+
+                ❌ <strong>Pregunta ${item.question.replace("q","")}</strong><br><br>
+
+                ✅ <strong>Respuesta correcta:</strong><br>
+                ${item.correct}<br><br>
+
+                💡 <strong>¿Por qué?</strong><br>
+                ${item.explanation}
+
+                </div>
+                `;
+
+            });
+
+        }
+
+        result.innerHTML = feedback;
+
     });
-
-    const total = Object.keys(answers).length;
-
-    const percentage = Math.round((score / total) * 100);
-
-    let feedback = "";
-
-    if (percentage >= 80) {
-
-        feedback = `🏆 ¡Excelente! ${score}/${total} respuestas correctas. Demostraste un gran dominio sobre ciberseguridad.`;
-
-        unlockAchievement(
-            "cyber-expert",
-            "Experto en Ciberseguridad"
-        );
-
-    } else if (percentage >= 50) {
-
-        feedback = `👍 ¡Buen trabajo! ${score}/${total} respuestas correctas. Vas por buen camino, sigue practicando.`;
-
-    } else {
-
-        feedback = `📚 Sigue aprendiendo. ${score}/${total} respuestas correctas. Revisa los conceptos de ciberseguridad e intenta nuevamente.`;
-
-    }
-
-    result.innerHTML = feedback;
-
-});
 
 }
 
